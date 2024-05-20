@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) throws IOException {
-        File arquivo = new File("C:/Users/Micro/IdeaProjects/compProjeto/src/teste.txt"); // pega os testes
+        File arquivo = new File("teste.txt"); // pega os testes
 
         Analisador lexico = new Analisador(); // chama o nosso analisador
         @SuppressWarnings("resource") // resolver o bug do input
