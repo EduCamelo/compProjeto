@@ -1,4 +1,4 @@
-// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
+package gen;// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -136,42 +136,42 @@ public class expBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements ex
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoLogica(expParser.ExpressaoLogicaContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpreLogica(expParser.ExpreLogicaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpreRelacional(expParser.ExpreRelacionalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpreAritmetica(expParser.ExpreAritmeticaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpreMulti(expParser.ExpreMultiContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoUnaria(expParser.ExpressaoUnariaContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpreUnaria(expParser.ExpreUnariaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpressaoPostfix(expParser.ExpressaoPostfixContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExprePostfix(expParser.ExprePostfixContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

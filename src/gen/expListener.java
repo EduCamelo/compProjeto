@@ -1,4 +1,4 @@
-// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
+package gen;// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -177,65 +177,65 @@ public interface expListener extends ParseTreeListener {
 	 */
 	void exitExpressao(expParser.ExpressaoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoLogica}.
+	 * Enter a parse tree produced by {@link expParser#expreLogica}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoLogica(expParser.ExpressaoLogicaContext ctx);
+	void enterExpreLogica(expParser.ExpreLogicaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoLogica}.
+	 * Exit a parse tree produced by {@link expParser#expreLogica}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoLogica(expParser.ExpressaoLogicaContext ctx);
+	void exitExpreLogica(expParser.ExpreLogicaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoRelacional}.
+	 * Enter a parse tree produced by {@link expParser#expreRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx);
+	void enterExpreRelacional(expParser.ExpreRelacionalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoRelacional}.
+	 * Exit a parse tree produced by {@link expParser#expreRelacional}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx);
+	void exitExpreRelacional(expParser.ExpreRelacionalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoAritmetica}.
+	 * Enter a parse tree produced by {@link expParser#expreAritmetica}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx);
+	void enterExpreAritmetica(expParser.ExpreAritmeticaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoAritmetica}.
+	 * Exit a parse tree produced by {@link expParser#expreAritmetica}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx);
+	void exitExpreAritmetica(expParser.ExpreAritmeticaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoMultiplicativa}.
+	 * Enter a parse tree produced by {@link expParser#expreMulti}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx);
+	void enterExpreMulti(expParser.ExpreMultiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoMultiplicativa}.
+	 * Exit a parse tree produced by {@link expParser#expreMulti}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx);
+	void exitExpreMulti(expParser.ExpreMultiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoUnaria}.
+	 * Enter a parse tree produced by {@link expParser#expreUnaria}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoUnaria(expParser.ExpressaoUnariaContext ctx);
+	void enterExpreUnaria(expParser.ExpreUnariaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoUnaria}.
+	 * Exit a parse tree produced by {@link expParser#expreUnaria}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoUnaria(expParser.ExpressaoUnariaContext ctx);
+	void exitExpreUnaria(expParser.ExpreUnariaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#expressaoPostfix}.
+	 * Enter a parse tree produced by {@link expParser#exprePostfix}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressaoPostfix(expParser.ExpressaoPostfixContext ctx);
+	void enterExprePostfix(expParser.ExprePostfixContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link expParser#expressaoPostfix}.
+	 * Exit a parse tree produced by {@link expParser#exprePostfix}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressaoPostfix(expParser.ExpressaoPostfixContext ctx);
+	void exitExprePostfix(expParser.ExprePostfixContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link expParser#argumentos}.
 	 * @param ctx the parse tree

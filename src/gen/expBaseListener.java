@@ -1,4 +1,4 @@
-// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
+package gen;// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -220,73 +220,73 @@ public class expBaseListener implements expListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoLogica(expParser.ExpressaoLogicaContext ctx) { }
+	@Override public void enterExpreLogica(expParser.ExpreLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoLogica(expParser.ExpressaoLogicaContext ctx) { }
+	@Override public void exitExpreLogica(expParser.ExpreLogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx) { }
+	@Override public void enterExpreRelacional(expParser.ExpreRelacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx) { }
+	@Override public void exitExpreRelacional(expParser.ExpreRelacionalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx) { }
+	@Override public void enterExpreAritmetica(expParser.ExpreAritmeticaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx) { }
+	@Override public void exitExpreAritmetica(expParser.ExpreAritmeticaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx) { }
+	@Override public void enterExpreMulti(expParser.ExpreMultiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx) { }
+	@Override public void exitExpreMulti(expParser.ExpreMultiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoUnaria(expParser.ExpressaoUnariaContext ctx) { }
+	@Override public void enterExpreUnaria(expParser.ExpreUnariaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoUnaria(expParser.ExpressaoUnariaContext ctx) { }
+	@Override public void exitExpreUnaria(expParser.ExpreUnariaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressaoPostfix(expParser.ExpressaoPostfixContext ctx) { }
+	@Override public void enterExprePostfix(expParser.ExprePostfixContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressaoPostfix(expParser.ExpressaoPostfixContext ctx) { }
+	@Override public void exitExprePostfix(expParser.ExprePostfixContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

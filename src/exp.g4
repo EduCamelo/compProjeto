@@ -6,16 +6,16 @@ declarar : declararVAR | declararFunc | declararEstruct | coment | arrayIniciali
 
 // declaracao das variaveis
 
-declararVAR : type ID ';'| type ID '=' expressao ';'; // Aq eu vou declarar uma váriavel, exemplos: Int i; OU Int i = 0;
+declararVAR : type * ID ';'| type  ID  '='  expressao  ';'; // Aq eu vou declarar uma váriavel, exemplos: Int i; OU Int i = 0;
 
 type : 'int' | 'float' | 'double' | 'char' | 'boolean' | 'vet'; // Aq são os tipos das váriaveis
 
 // funcao
-declararFunc : type ID '(' parametros ')' bloco | type ID '(' ')' bloco; // Aq é a declaração das funções, exemplos: For( i = 0; i>0;++i) {} OU Int Main(){}
+declararFunc : type  ID  '(' parametros ')'   bloco  | type  ID  '(' ')'  bloco ; // Aq é a declaração das funções, exemplos: For( i = 0; i>0;++i) {} OU Int Main(){}
 
-parametros : parametro | parametro ',' parametros; // Aq são os parametros das funções
+parametros :  parametro |  parametro  ','  parametros  ; // Aq são os parametros das funções
 
-parametro : type ID | type ID '[' ']' | type '...' ID; // Aq são os tipos de parametros, exemplo: Int x OU Int[] vetorInt
+parametro : type  ID  | type  ID  '[' ']' | type  ID; // Aq são os tipos de parametros, exemplo: Int x OU Int[] vetorInt
 
 // bloco de codigo
 bloco : '{' NEWLINE* (declarar NEWLINE)* '}'; // Aq é para quando eu utliziar um FOR, ELSE, IF ou instruções que utilizem algo em bloco(tudo que tem "{}")
@@ -25,45 +25,45 @@ coment : '//' ~NEWLINE* | '/*' ~'*/'* '*/'; // Comentários
 
 
 //Aqui são exepressõs de atribuição, exemplo: i += 1
-atribuicao :    ID '=' expressao
-              | ID '+=' expressao
-              | ID '-=' expressao
-	          | ID '*=' expressao
-	          | ID '/=' expressao
-	          | ID '%=' expressao
-	          | ID '&&=' expressao
-	          | ID '||=' expressao
-	          | ID '=' ID
-	          | ID '+=' ID
-	          | ID '-=' ID
-              | ID '*=' ID
-	          | ID '/=' ID
- 	          | ID '%=' ID
-	          | ID '&&=' ID
-	          | ID '||=' ID;
+atribuicao :    ID  '='  expressao
+              | ID  '+='  expressao
+              | ID  '-='  expressao
+	          | ID '*='  expressao
+	          | ID  '/='  expressao
+	          | ID  '%='  expressao
+	          | ID  '&&='  expressao
+	          | ID  '||='  expressao
+	          | ID  '='  ID
+	          | ID  '+='  ID
+	          | ID  '-='  ID
+              | ID  '*='  ID
+	          | ID  '/='  ID
+ 	          | ID  '%='  ID
+	          | ID  '&&='  ID
+	          | ID  '||='  ID;
 
 //Aq são as estuturas das condicionais e lações de repetição
 estruturaControle : 'if' '(' expressao ')' bloco
-                  | 'if' '(' expressao ')' bloco 'else' bloco
+                  | 'if' '(' expressao ')' bloco  'else' bloco
                   | 'while' '(' expressao ')' bloco
 		          | 'for' '(' expressao ';' expressao ';' expressao ')' bloco
 		          | 'switch' '(' expressao ')' caseLista
 		          | 'break' ';'
 		          | 'continue' ';'
-		          | 'return' expressao ';';
+		          | 'return'  expressao ';';
 
 //Aq é o SWITCH
 caseLista: (NEWLINE caseDecl)* | caseDecl*;
 
 //Aq é o CASE
-caseDecl: 'case' expressao ':' bloco
- 	| 'default' ':' bloco;
+caseDecl: 'case'  expressao ':'  bloco
+ 	| 'default'  ':'  bloco;
 
 //?
 declararEstruct : 'struct' ID '{' (NEWLINE* declararVAR NEWLINE)* '}' NEWLINE* ';';
 
 //Aq é a estrutura do array
-array : ID '[' expressao ']' | ID '[' ']';
+array : ID  '[' expressao ']' | ID  '[' ']';
 
 //?
 arrayInicializacao : '{' 'expressaoLista' '}';
@@ -73,29 +73,31 @@ expressao : atribuicao | expreLogica;
 
 //Aq é as expressões logicas, exemplo: i<0 && i>-1
 expreLogica : expreRelacional
-            | expreLogica'&&' expreRelacional
-            | expreLogica '||' expreRelacional
+            | expreLogica '&&'  expreRelacional
+            | expreLogica  '||'  expreRelacional
             | '!' expreRelacional;
 
 //Aq é as expressões logicas, exemplo: i<0 && i>-1
 expreRelacional : expreAritmetica
-                    | expreAritmetica '>' expreAritmetica
-		            | expreAritmetica '>=' expreAritmetica
-		            | expreAritmetica '<' expreAritmetica
-		            | expreAritmetica '<=' expreAritmetica
-		            | expreAritmetica '!=' expreAritmetica
-		            | expreAritmetica '==' expreAritmetica;
+                    | expreAritmetica  '>'  expreAritmetica
+		            | expreAritmetica  '>='  expreAritmetica
+		            | expreAritmetica  '<'  expreAritmetica
+		            | expreAritmetica  '<='  expreAritmetica
+		            | expreAritmetica  '!='  expreAritmetica
+		            | expreAritmetica  '=='  expreAritmetica |
+		            ID  '>='  ID;
+
 
 //Aq é as expressões aritmeticas, exemplo: i+1
 expreAritmetica : expreMulti
-                    | expreAritmetica '+' expreMulti
-		            | expreAritmetica '-' expreMulti;
+                    | expreAritmetica  '+'  expreMulti
+		            | expreAritmetica  '-'  expreMulti;
 
 //Aq é as expressões de multi, modulo e div
 expreMulti : expreUnaria
-           | expreMulti '*' expreUnaria
-		   | expreMulti '/' expreUnaria
-		   | expreMulti '%' expreUnaria;
+           | expreMulti  '*'  expreUnaria
+		   | expreMulti  '/'  expreUnaria
+		   | expreMulti  '%'  expreUnaria;
 
 //Aq são expressões rapidas de Aritmetica, exemplo: i++ OU i--
 expreUnaria : exprePostfix

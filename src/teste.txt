@@ -1,11 +1,31 @@
-for(i = 0; i >= 0; ++i){
-int l;
-vet vector = sapao[10+1];
+int main() {
+int numero1 = 123;
+int numero2 = 456;
+int resultado = numero1 + numero2;
+return resultado;
+}
+float calcularMedia(float nota1, float nota2) {
+float media = (nota1 + nota2) / 2.0;
+if (media>=6.0) {
+} else {
+}
+return media;
+}
+void saudacao() {
+char mensagem[] = "Ola, mundo!";
+int numero = 42;
+println(mensagem);
+println("O numero e: " + numero);
+}
+// Este e um comentario de linha.
+int dobrar(int x) {
+// aq tinha um bloco
+return x * 2;
+}
+void imprimirValores(int valores[]) {
+    // aq tinha um .length
+for (int i = 0; i < valoreslength; i++) {
+println("Valor[" + i + "] = " + valores[i]);
+}
 }
 
-int main() {
- int num1 = 123;
- float num2 = 45.67;
- char letra = "A";
- return 0;
-}

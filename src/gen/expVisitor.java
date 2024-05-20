@@ -1,4 +1,4 @@
-// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
+package gen;// Generated from C:/Users/Micro/IdeaProjects/compProjeto/src/exp.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -112,41 +112,41 @@ public interface expVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpressao(expParser.ExpressaoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoLogica}.
+	 * Visit a parse tree produced by {@link expParser#expreLogica}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoLogica(expParser.ExpressaoLogicaContext ctx);
+	T visitExpreLogica(expParser.ExpreLogicaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoRelacional}.
+	 * Visit a parse tree produced by {@link expParser#expreRelacional}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoRelacional(expParser.ExpressaoRelacionalContext ctx);
+	T visitExpreRelacional(expParser.ExpreRelacionalContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoAritmetica}.
+	 * Visit a parse tree produced by {@link expParser#expreAritmetica}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoAritmetica(expParser.ExpressaoAritmeticaContext ctx);
+	T visitExpreAritmetica(expParser.ExpreAritmeticaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoMultiplicativa}.
+	 * Visit a parse tree produced by {@link expParser#expreMulti}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoMultiplicativa(expParser.ExpressaoMultiplicativaContext ctx);
+	T visitExpreMulti(expParser.ExpreMultiContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoUnaria}.
+	 * Visit a parse tree produced by {@link expParser#expreUnaria}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoUnaria(expParser.ExpressaoUnariaContext ctx);
+	T visitExpreUnaria(expParser.ExpreUnariaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#expressaoPostfix}.
+	 * Visit a parse tree produced by {@link expParser#exprePostfix}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressaoPostfix(expParser.ExpressaoPostfixContext ctx);
+	T visitExprePostfix(expParser.ExprePostfixContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link expParser#argumentos}.
 	 * @param ctx the parse tree
