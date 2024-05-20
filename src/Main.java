@@ -70,7 +70,6 @@ public class Main {
         System.out.println("ANALISE SINTATICA: ");
         // Exemplo de expressão de entrada
         String expression = lexico.getArgs();
-
         // Criação do InputStream a partir da string de entrada
         InputStream inputStream = new ByteArrayInputStream(expression.getBytes(StandardCharsets.UTF_8));
 

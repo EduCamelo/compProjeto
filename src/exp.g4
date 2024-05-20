@@ -6,7 +6,7 @@ declarar : declararVAR | declararFunc | declararEstruct | coment | arrayIniciali
 
 // declaracao das variaveis
 
-declararVAR : type * ID ';'| type  ID  '='  expressao  ';'; // Aq eu vou declarar uma váriavel, exemplos: Int i; OU Int i = 0;
+declararVAR : type ID ';'| type  ID  '='  expressao  ';'; // Aq eu vou declarar uma váriavel, exemplos: Int i; OU Int i = 0;
 
 type : 'int' | 'float' | 'double' | 'char' | 'boolean' | 'vet'; // Aq são os tipos das váriaveis
 
@@ -15,7 +15,7 @@ declararFunc : type  ID  '(' parametros ')'   bloco  | type  ID  '(' ')'  bloco 
 
 parametros :  parametro |  parametro  ','  parametros  ; // Aq são os parametros das funções
 
-parametro : type  ID  | type  ID  '[' ']' | type  ID; // Aq são os tipos de parametros, exemplo: Int x OU Int[] vetorInt
+parametro : type  ID  | type  ID  '[' ']'; // Aq são os tipos de parametros, exemplo: Int x OU Int[] vetorInt
 
 // bloco de codigo
 bloco : '{' NEWLINE* (declarar NEWLINE)* '}'; // Aq é para quando eu utliziar um FOR, ELSE, IF ou instruções que utilizem algo em bloco(tudo que tem "{}")
@@ -59,7 +59,7 @@ caseLista: (NEWLINE caseDecl)* | caseDecl*;
 caseDecl: 'case'  expressao ':'  bloco
  	| 'default'  ':'  bloco;
 
-//?
+//Em C++, vc pode declarar "classes" dentro de classes usando o struct
 declararEstruct : 'struct' ID '{' (NEWLINE* declararVAR NEWLINE)* '}' NEWLINE* ';';
 
 //Aq é a estrutura do array
@@ -105,14 +105,12 @@ expreUnaria : exprePostfix
                 | '++' exprePostfix
 		        | '--' exprePostfix;
 
-//?
 exprePostfix : primaria
                  | primaria '[' expressao ']'
                  | primaria '(' argumentos ')'
 		         | primaria '.' ID
   		         | primaria '->' ID;
 
-//?
 argumentos : 'expressaoLista' | 'vazio';
 
 //Aq são as expressões regulares e suas inicializações.
