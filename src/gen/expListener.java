@@ -87,16 +87,6 @@ public interface expListener extends ParseTreeListener {
 	 */
 	void exitBloco(expParser.BlocoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link expParser#coment}.
-	 * @param ctx the parse tree
-	 */
-	void enterComent(expParser.ComentContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link expParser#coment}.
-	 * @param ctx the parse tree
-	 */
-	void exitComent(expParser.ComentContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link expParser#atribuicao}.
 	 * @param ctx the parse tree
 	 */

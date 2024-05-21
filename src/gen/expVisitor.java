@@ -58,12 +58,6 @@ public interface expVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBloco(expParser.BlocoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link expParser#coment}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitComent(expParser.ComentContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link expParser#atribuicao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

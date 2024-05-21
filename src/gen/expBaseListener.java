@@ -112,18 +112,6 @@ public class expBaseListener implements expListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComent(expParser.ComentContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitComent(expParser.ComentContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterAtribuicao(expParser.AtribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}

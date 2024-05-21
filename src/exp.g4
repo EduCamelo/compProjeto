@@ -1,9 +1,10 @@
 grammar exp;
 
-programa : (declarar NEWLINE)*; // Aq começa a declaração de QUALQUER função, variavel e outras coisas
+programa :  (declarar)* (NEWLINE)*; // Aq começa a declaração de QUALQUER função, variavel e outras coisas
 
-declarar : declararVAR | declararFunc | declararEstruct | coment | arrayInicializacao | estruturaControle; // aqui direciona para onde vai a declaração
+declarar : declararVAR | declararFunc | declararEstruct | arrayInicializacao | estruturaControle |  Proximo; // aqui direciona para onde vai a declaração
 
+Proximo : '\n' -> skip;
 // declaracao das variaveis
 
 declararVAR : type ID ';'| type  ID  '='  expressao  ';'; // Aq eu vou declarar uma váriavel, exemplos: Int i; OU Int i = 0;
@@ -20,8 +21,6 @@ parametro : type  ID  | type  ID  '[' ']'; // Aq são os tipos de parametros, ex
 // bloco de codigo
 bloco : '{' NEWLINE* (declarar NEWLINE)* '}'; // Aq é para quando eu utliziar um FOR, ELSE, IF ou instruções que utilizem algo em bloco(tudo que tem "{}")
 
-// logica pra comentario
-coment : '//' ~NEWLINE* | '/*' ~'*/'* '*/'; // Comentários
 
 
 //Aqui são exepressõs de atribuição, exemplo: i += 1

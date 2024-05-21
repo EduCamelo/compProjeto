@@ -5,6 +5,7 @@ import java.util.regex.Pattern;  // Faz expressões regulares
 
 public class Analisador {
 
+    private ArrayList<String> tokensgerados = new ArrayList<>();
     private ArrayList<String> sysPalavras = new ArrayList<String>();
     private ArrayList<String> Op = new ArrayList<String>();
     private ArrayList<Character> Simb = new ArrayList<Character>();
@@ -38,6 +39,14 @@ public class Analisador {
         this.Simb.add(';');
         this.Simb.add('.');
 
+    }
+
+    public ArrayList<String> getTokensgerados() {
+        return tokensgerados;
+    }
+
+    public void setTokensgerados(ArrayList<String> tokensgerados) {
+        this.tokensgerados = tokensgerados;
     }
 
     public void teste() {
@@ -135,17 +144,21 @@ public class Analisador {
             return;
         } else if (Operador(lexema)) { // reconhece o operador
             this.tokens.add("Operador: " + lexema);
+            this.tokensgerados.add(lexema + " ");
             this.lexema = "";
         } else if (isNum(lexema)) { // reconhece como número
             if (NumInt(lexema)) {  // reconhece número inteiro
                 this.tokens.add("Num_int: " + lexema);
+                this.tokensgerados.add(lexema + " ");
                 this.lexema = "";
             } else if (NumDouble(lexema)) {// reconhece número double
                 this.tokens.add("Num_double: " + lexema);
+                this.tokensgerados.add(lexema + " ");
                 this.lexema = "";
             }
         } else if (sysPalavras(lexema)) { // reconhece palavras do sistema
             this.tokens.add("Palavra do Sys: " + lexema);
+            this.tokensgerados.add(lexema + " ");
             this.lexema = "";
         } else if (Ids(lexema)) {  // reconhece o id
             if (SinsID(lexema)) {  // reconhece se já tem na lista de simbolos
@@ -153,6 +166,7 @@ public class Analisador {
                     if (simbolosLista.get(i).equalsIgnoreCase(lexema)) {
                         i++;
                         this.tokens.add("id(" + i + "): " + lexema);
+                        this.tokensgerados.add(lexema + " ");
                     }
                 }
                 this.lexema = "";
@@ -161,10 +175,12 @@ public class Analisador {
                 this.tokens.add("Id(" + this.idCont + "): " + lexema);
                 this.simbolos.add("Id(" + this.idCont + "): " + lexema);
                 this.simbolosLista.add(lexema);
+                this.tokensgerados.add(lexema + " ");
                 this.lexema = "";
             }
-        } else if (texto(lexema)) { // Reconhece o testo
+        } else if (texto(lexema)) { // Reconhece o texto
             this.tokens.add("Texto: " + lexema);
+            this.tokensgerados.add(lexema + " ");
             this.lexema = "";
         } else if (comentario(lexema)) {// valida se é um comentário
 
@@ -179,6 +195,7 @@ public class Analisador {
             this.lexema = "";
         } else {
             System.out.println("LEXEMA NÃO RECONHECIDO: " + lexema);
+            this.tokensgerados.add(lexema + " ");
             this.lexema = "";
         }
     }
